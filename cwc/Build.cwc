@@ -6,23 +6,22 @@
 -I ../include/ 
 >
 ;Build Darknet
--c ../src/ -o obj/{sOut}/lib/Chipmunk/
+-c ../src/ -o obj/{sOut}/lib/Darknet/
 -{vIncl}
 -{vOS_Flag}
 >
 ;Generate Dynamic Lib
--o obj/{sOut}/lib/ -#To Lib/{sOut}/Chipmunk.{_sDynamic}
+;-o obj/{sOut}/lib/ -#To Lib/{sOut}/Darknet.{_sDynamic}
 >
 ;Generate Static Lib
--o obj/{sOut}/lib/ -#To Lib/{sOut}/libChipmunk.a
+;-o obj/{sOut}/lib/ -#To Lib/{sOut}/libDarknet.a
 >
 ;Build an Example
--c ../Demo/ -o obj/{sOut}/
--{vIncl}
--{vOS_Flag}
+;-c ../Demo/ -o obj/{sOut}/
+;-{vIncl}
+;-{vOS_Flag}
 >
 ;Generate executable
--o obj/{sOut}/ -#To _out/{sOut}/App.*
-{vOS_FlagLink}
+-o obj/{sOut}/ -#To _out/{sOut}/Darknet.exe -{vOS_FlagLink} 
 >
 -#Run
