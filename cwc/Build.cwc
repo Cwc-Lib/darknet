@@ -10,6 +10,11 @@
 -{vIncl}
 -{vOS_Flag}
 >
+;Build tests
+-c ../test/ -o obj/{sOut}/test/
+-{vIncl}
+-{vOS_Flag}
+>
 ;Generate Dynamic Lib
 ;-o obj/{sOut}/lib/ -#To Lib/{sOut}/Darknet.{_sDynamic}
 >
